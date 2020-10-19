@@ -1,10 +1,8 @@
 
 //3.1, 3.2, 3.3, 3.4 ja 3.5 3.6 OK!!!
 //3.7 ja 3.8 tekemättä
-//3.9 OK!
-//Sitten pitäis siirtää nettiin.
-//kokeilu toiiiko
-//uusi kokeilu
+//3.9 ja 3.10 OK!
+
 
 const express = require('express')
 const app = express()
@@ -14,6 +12,7 @@ const cors = require('cors')
 app.use(cors())
 
 app.use(express.json())
+app.use(express.static('build'))
 
 let persons = [
   { 
