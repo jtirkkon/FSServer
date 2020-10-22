@@ -1,7 +1,8 @@
 
 //3.1, 3.2, 3.3, 3.4 ja 3.5 3.6 OK!!!
 //3.7 ja 3.8 tekemättä
-//3.9 ja 3.10 OK!
+//3.9, 3.10 ja 3.11 OK! Frontendin toiminta paikallikesti?
+//Seuraavaksi tietokanta
 
 
 const express = require('express')
