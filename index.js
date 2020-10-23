@@ -57,8 +57,17 @@ app.get('/', (req, res) => {
 })
 
 app.get('/api/persons', (req, res) => {
-  res.json(persons)
+  Person.find({}).then(persons => {
+    res.json(persons)
+  })
+  //res.json(persons)
 })
+
+/*app.get('/api/notes', (request, response) => {
+  Note.find({}).then(notes => {
+    response.json(notes)
+  })
+})*/
 
 app.get('/api/persons/:id', (request, response) => {
   const id = Number(request.params.id)
