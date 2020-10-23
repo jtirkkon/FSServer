@@ -1,12 +1,14 @@
 
 //3.1, 3.2, 3.3, 3.4 ja 3.5 3.6 OK!!!
 //3.7 ja 3.8 tekemättä
-//3.9, 3.10 ja 3.11 OK! Frontendin toiminta paikallikesti?
-//Seuraavaksi tietokanta
+//3.9, 3.10, 3.11 ja 3.12 OK!
+//3.13 Numerot tietokannasta
 
 
+require('dotenv').config()
 const express = require('express')
 const app = express()
+const Person = require('./models/person')
 
 const cors = require('cors')
 
@@ -192,7 +194,7 @@ app.listen(PORT, () => {
 
 //Git repositorio seuraavaksi
 
-const PORT = process.env.PORT || 3001 
+const PORT = process.env.PORT
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
 })

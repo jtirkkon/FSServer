@@ -6,27 +6,43 @@ if (process.argv.length<3) {
 }
 
 const password = process.argv[2]
+const name = process.argv[3]
+const number = process.argv[4]
 
 const url =
-  `mongodb+srv://fullstack:${password}@cluster0-ostce.mongodb.net/test?retryWrites=true`
+  `mongodb+srv://jtirkkon:${password}@cluster0.ar9ix.mongodb.net/phonebook?retryWrites=true`
+//`mongodb+srv://fullstack:${password}@cluster0-ostce.mongodb.net/test?retryWrites=true`
 
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true })
 
-const noteSchema = new mongoose.Schema({
-  content: String,
-  date: Date,
-  important: Boolean,
+const personSchema = new mongoose.Schema({
+  //id: Number,
+  name: String,
+  number: String,
+  show: Boolean
 })
 
-const Note = mongoose.model('Note', noteSchema)
+//const Note = mongoose.model('Note', noteSchema)
+const Person = mongoose.model('Person', noteSchema)
 
-const note = new Note({
-  content: 'HTML is Easy',
-  date: new Date(),
-  important: true,
+const person = new Person({
+  name: name,
+  number: number,
+  show: true,
 })
 
-note.save().then(response => {
-  console.log('note saved!')
-  mongoose.connection.close()
-})
+if (process.argv.length === 5) {
+  person.save().then(response => {
+    console.log('person saved!')
+   mongoose.connection.close()
+  })
+}
+
+if (process.argv.length === 3) {
+  Person.find({}).then(result => {
+    result.forEach(person => {
+      console.log(person)
+    })
+    mongoose.connection.close()
+  })
+}
