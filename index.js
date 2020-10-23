@@ -56,9 +56,10 @@ app.get('/', (req, res) => {
   res.send('<h1>Hello World! h</h1>')
 })
 
-app.get('/api/persons', (req, res) => {
+app.get('/api/persons', (request, response) => {
   Person.find({}).then(persons => {
-    res.json(persons)
+    response.json(persons)
+    console.log(persons)
   })
   //res.json(persons)
 })
