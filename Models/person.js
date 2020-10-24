@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 
-const url = process.env.MONGODB_URI
+//const url = process.env.MONGODB_URI
+const url = 'mongodb+srv://jtirkkon:dbb120ET@cluster0.ar9ix.mongodb.net/phonebook?retryWrites=true'
 console.log('connecting to', url)
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true })
   .then(result => {    console.log('connected to MongoDB')  
