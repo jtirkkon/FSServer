@@ -9,9 +9,6 @@
     "test": "\"echo \\\"Error: no test specified\\\" && exit 1\"",
     "deploy": "git push heroku master",
     "logs:prod": "heroku logs --tail"
-
-    
-
   },
   "author": "Jouni",
   "license": "ISC",
