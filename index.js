@@ -3,6 +3,7 @@
 //3.7 ja 3.8 tekemättä
 //3.9, 3.10, 3.11 ja 3.12 OK!
 //3.13 Numerot tietokannasta
+//localhost toimii
 
 
 require('dotenv').config()
@@ -17,7 +18,7 @@ app.use(cors())
 app.use(express.json())
 app.use(express.static('build'))
 
-let persons = [
+/*let persons = [
   { 
       id: 1,
       name: "Arto Hellas",
@@ -50,7 +51,7 @@ let persons = [
       number: "050-3297068",
       show: true
     }
-]
+]*/
 
 app.get('/', (req, res) => {
   res.send('<h1>Hello World! h</h1>')
