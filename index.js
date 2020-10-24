@@ -4,6 +4,7 @@
 //3.9, 3.10, 3.11 ja 3.12 OK!
 //3.13 Numerot tietokannasta
 //localhost toimii
+//salasana piti laittaa 
 
 
 require('dotenv').config()
