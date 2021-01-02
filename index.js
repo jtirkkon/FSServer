@@ -198,7 +198,7 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
 })*/
 
-//Git repositorio seuraavaksi
+
 
 const PORT = process.env.PORT
 app.listen(PORT, () => {
