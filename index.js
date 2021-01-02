@@ -1,10 +1,4 @@
 
-//3.1, 3.2, 3.3, 3.4 ja 3.5 3.6 OK!!!
-//3.7 ja 3.8 tekemättä
-//3.9, 3.10, 3.11 ja 3.12 OK!
-//3.13 Numerot tietokannasta
-//localhost toimii
-//salasana piti laittaa 
 
 
 require('dotenv').config()
